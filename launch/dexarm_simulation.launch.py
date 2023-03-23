@@ -11,13 +11,14 @@ from launch.substitutions import LaunchConfiguration, Command
 import xacro
 import yaml
 
-DeclareLaunchArgument('robot_name', default_value='dexarm', description='Robot name')
-DeclareLaunchArgument('x', default_value='0.0', description='The x-coordinate for the robot')
-DeclareLaunchArgument('y', default_value='0.0', description='The y-coordinate for the robot')
-DeclareLaunchArgument('z', default_value='0.0', description='The x-coordinate for the robot')
-DeclareLaunchArgument('rviz', default_value='false', description='Start rviz.'),
 
 def generate_launch_description():
+    
+    DeclareLaunchArgument('robot_name', default_value='dexarm', description='Robot name')
+    DeclareLaunchArgument('x', default_value='0.0', description='The x-coordinate for the robot')
+    DeclareLaunchArgument('y', default_value='0.0', description='The y-coordinate for the robot')
+    DeclareLaunchArgument('z', default_value='0.0', description='The x-coordinate for the robot')
+    DeclareLaunchArgument('rviz', default_value='false', description='Start rviz.')
     
     x, y, z = LaunchConfiguration('x'), LaunchConfiguration('y'), LaunchConfiguration('z')
     robot_name = LaunchConfiguration('robot_name')
