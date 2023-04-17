@@ -226,7 +226,7 @@ def generate_launch_description():
     ld.add_action(bridge_cmd)
     ld.add_action(arm_controller_spawner_cmd)
     ld.add_action(joint_state_broadcaster_spawner_cmd)
-    # ld.add_action(move_group_cmd)
+    ld.add_action(move_group_cmd)
     ld.add_action(rviz_cmd)
 
     return ld
